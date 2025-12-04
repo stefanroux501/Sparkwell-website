@@ -1,13 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Sparkwell</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sparkwell — Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Sparkwell</a>
 
-    <h1>Hello, Sparkwell!</h1>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#personnel" class="nav-link">Personnel</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#shop" class="nav-link">Shop</a>
+        <a href="https://instagram.com/your_instagram" class="nav-btn" target="_blank" rel="noopener">Instagram</a>
+        <a href="#contact" class="nav-btn outline">Contact Us</a>
+      </nav>
 
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-inner">
+        <h1>Sparkwell</h1>
+        <p class="lead">We ignite ideas into beautiful, usable websites and small digital products.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#services">Services</a>
+          <a class="btn ghost" href="#shop">Shop</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About</h2>
+      <p>Sparkwell is a small creative studio focused on clean design and fast static sites for creators and boutique businesses.</p>
+    </section>
+
+    <section id="personnel" class="personnel container">
+      <h2>Personnel</h2>
+      <p class="muted">Meet the people behind Sparkwell</p>
+
+      <div class="people-grid">
+        <article class="person">
+          <img src="images/person1.jpg" alt="Photo of Jane Doe — Founder" />
+          <h3>Jane Doe</h3>
+          <p class="role">Founder & Designer</p>
+        </article>
+
+        <article class="person">
+          <img src="images/person2.jpg" alt="Photo of John Smith — Developer" />
+          <h3>John Smith</h3>
+          <p class="role">Lead Developer</p>
+        </article>
+
+        <article class="person">
+          <img src="images/person3.jpg" alt="Photo of Sam Lee — Product" />
+          <h3>Sam Lee</h3>
+          <p class="role">Product & Ops</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="services container">
+      <h2>Services</h2>
+      <p class="muted">What we offer — short descriptions and quick links.</p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Website Design</h3>
+          <p>Clean, responsive pages built fast. Perfect for portfolios, landing pages and small shops.</p>
+          <a class="btn small" href="#contact">Get a quote</a>
+        </div>
+
+        <div class="card">
+          <h3>Branding</h3>
+          <p>Logo, color system, and a visual voice so your site actually looks like you.</p>
+          <a class="btn small" href="#contact">Work with us</a>
+        </div>
+
+        <div class="card">
+          <h3>Small Shop Setup</h3>
+          <p>Static shops, product pages, and simple buy flows — made for creators and makers.</p>
+          <a class="btn small" href="#shop">Visit shop</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="shop container">
+      <h2>Shop</h2>
+      <p class="muted">Digital templates, small assets, and starter kits. Coming soon — or link to your store here.</p>
+      <a class="btn primary" href="#contact">Request products</a>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p>Questions or a project in mind? Email <a href="mailto:hello@sparkwell.example">hello@sparkwell.example</a> or use the button below.</p>
+      <a class="btn primary" href="mailto:hello@sparkwell.example">Contact Us</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Sparkwell — Built with focus.</small>
+    </div>
+  </footer>
+
+  <script>
+    // small behavior: mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+    toggle && toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
 </body>
 </html>
