@@ -213,6 +213,158 @@ body{
   text-align:center;
   font-size:13px;
 }
+/* CONTACT PAGE LAYOUT */
+.contact-page{
+  margin-top:26px;
+}
+
+.contact-layout{
+  display:grid;
+  grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+  gap:28px;
+  align-items:flex-start;
+}
+
+.contact-left{
+  background:rgba(0,0,0,0.55);
+  padding:20px;
+  border-radius:10px;
+}
+
+.contact-title{
+  margin:0 0 6px;
+}
+
+.quote-title{
+  margin:18px 0 8px;
+}
+
+/* FORM */
+.quote-form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:18px;
+}
+
+.form-row{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.form-row-inline{
+  flex-direction:row;
+  gap:10px;
+}
+
+.quote-form input,
+.quote-form textarea{
+  border-radius:4px;
+  border:1px solid rgba(255,255,255,0.18);
+  padding:10px 12px;
+  background:#111;
+  color:var(--white);
+  font:inherit;
+}
+
+.quote-form input::placeholder,
+.quote-form textarea::placeholder{
+  color:rgba(154,164,178,0.75);
+}
+
+.quote-form input:focus,
+.quote-form textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+  box-shadow:0 0 0 1px rgba(124,92,255,0.4);
+}
+
+/* FILE DROP AREA */
+.file-drop{
+  border-radius:6px;
+  border:1px dashed rgba(255,255,255,0.25);
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  font-size:14px;
+  cursor:pointer;
+  background:rgba(10,10,10,0.7);
+}
+.file-drop input{
+  display:none;
+}
+.file-drop-text{
+  color:var(--muted);
+}
+.file-button{
+  padding:6px 14px;
+  border-radius:4px;
+  background:#000;
+  border:1px solid rgba(255,255,255,0.6);
+  font-weight:600;
+}
+
+/* CONTACT DETAILS + HOURS */
+.contact-details{
+  margin-top:18px;
+}
+.contact-details h3{
+  margin-bottom:4px;
+}
+.contact-details p{
+  margin:2px 0;
+}
+.contact-details a{
+  color:var(--white);
+  text-decoration:underline;
+}
+
+.contact-hours{
+  margin-top:18px;
+}
+.hours-list{
+  list-style:none;
+  padding:0;
+  margin:8px 0 0;
+  font-size:14px;
+}
+.hours-list li{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+.hours-list li.current span{
+  font-weight:600;
+}
+
+/* MAP PLACEHOLDER */
+.contact-map{
+  min-height:320px;
+}
+.map-placeholder{
+  border-radius:10px;
+  background:#e5e7eb;
+  color:#111827;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  min-height:320px;
+  font-size:14px;
+}
+
+/* MOBILE CONTACT PAGE */
+@media (max-width:720px){
+  .contact-layout{
+    grid-template-columns:1fr;
+  }
+  .contact-map{
+    margin-top:12px;
+  }
+}
 
 /* RESPONSIVE */
 @media (max-width:720px){
